@@ -20,11 +20,10 @@ export class DashboardService {
     return this.dashboardData;
   }
 
-  constructor(private myLeadsService: LeadsService,
-              private myEnrollmentsService: EnrollmentsService) {
-      this.dashboardTitle = "My Dashboard Service - ON"
-      this.dashboardData = new Dashboard();
-      this.dashboardData.leads = myLeadsService.getLeadsData();
-      this.dashboardData.enrollments = myEnrollmentsService.getEnrollmentsData();
-               }
+  constructor(private myLeadsService: LeadsService, private myEnrollmentsService: EnrollmentsService) {
+    this.dashboardTitle = "My Dashboard Service - ON"
+    this.dashboardData = new Dashboard();
+    this.dashboardData.leads = myLeadsService.getLeadsData();
+    this.dashboardData.enrollments = myEnrollmentsService.getEnrollmentsData();
+  }
 }
